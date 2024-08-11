@@ -95,4 +95,4 @@ if __name__ == "__main__":
         
         logging.info("Keyboard listener is now running")
         l.join()
-        logging.info("Keyboard listener is now running 2")
+        
