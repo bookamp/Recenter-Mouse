@@ -1,59 +1,11 @@
  
-2024-08-11 02:40:50 - Starting recenter_mouse.ps1
-2024-08-11 02:40:53 - Creating conda environment 'recenter_mouse'...
-Collecting package metadata (current_repodata.json): ...working... done
-Solving environment: ...working... done
+2024-08-11 15:09:40 - Starting recenter_mouse.ps1
+2024-08-11 15:09:42 - Activating conda environment 'recenter_mouse'...
 
-## Package Plan ##
-
-  environment location: C:\Users\bookamp\.conda\envs\recenter_mouse
-
-  added / updated specs:
-    - python=3.11
-
-
-The following NEW packages will be INSTALLED:
-
-  bzip2              pkgs/main/win-64::bzip2-1.0.8-h2bbff1b_6 
-  ca-certificates    pkgs/main/win-64::ca-certificates-2024.7.2-haa95532_0 
-  libffi             pkgs/main/win-64::libffi-3.4.4-hd77b12b_1 
-  openssl            pkgs/main/win-64::openssl-3.0.14-h827c3e9_0 
-  pip                pkgs/main/win-64::pip-24.0-py311haa95532_0 
-  python             pkgs/main/win-64::python-3.11.9-he1021f5_0 
-  setuptools         pkgs/main/win-64::setuptools-72.1.0-py311haa95532_0 
-  sqlite             pkgs/main/win-64::sqlite-3.45.3-h2bbff1b_0 
-  tk                 pkgs/main/win-64::tk-8.6.14-h0416ee5_0 
-  tzdata             pkgs/main/noarch::tzdata-2024a-h04d1e81_0 
-  vc                 pkgs/main/win-64::vc-14.40-h2eaa2aa_0 
-  vs2015_runtime     pkgs/main/win-64::vs2015_runtime-14.40.33807-h98bb1dd_0 
-  wheel              pkgs/main/win-64::wheel-0.43.0-py311haa95532_0 
-  xz                 pkgs/main/win-64::xz-5.4.6-h8cc25b3_1 
-  zlib               pkgs/main/win-64::zlib-1.2.13-h8cc25b3_1 
-
-
-
-Downloading and Extracting Packages
-
-
-Preparing transaction: ...working... done
-Verifying transaction: ...working... done
-Executing transaction: ...working... done
-#
-# To activate this environment, use
-#
-#     $ conda activate recenter_mouse
-#
-# To deactivate an active environment, use
-#
-#     $ conda deactivate
-
-
-2024-08-11 02:41:03 - Activating conda environment 'recenter_mouse'...
-
-2024-08-11 02:41:04 - pyautogui is already installed.
-2024-08-11 02:41:04 - keyboard is already installed.
-2024-08-11 02:41:05 - pynput is already installed.
-2024-08-11 02:41:05 - Running Python script 'recenter_mouse.py'...
-2024-08-11 02:41:05 - Recenter Mouse Active
-2024-08-11 02:41:05 - Finished recenter_mouse.ps1
-2024-08-11 02:41:05,460 - Keyboard listener is now running
+2024-08-11 15:09:43 - pyautogui is already installed.
+2024-08-11 15:09:44 - keyboard is already installed.
+2024-08-11 15:09:44 - pynput is already installed.
+2024-08-11 15:09:44 - Running Python script 'recenter_mouse.py'...
+2024-08-11 15:09:44 - Recenter Mouse Active
+2024-08-11 15:09:44 - Finished recenter_mouse.ps1
+2024-08-11 15:09:44,891 - Keyboard listener is now running
