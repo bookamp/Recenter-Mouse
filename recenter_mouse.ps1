@@ -24,15 +24,16 @@ if ($condaEnvList -notmatch $envName) {
 
 # Activate the conda environment
 Log-Message "Activating conda environment '$envName'..."
-conda activate $envName | Out-String | Add-Content -Path $logFile
+& conda activate $envName | Out-String | Add-Content -Path $logFile
 
 # Install necessary packages
-$packages = @("pyautogui", "keyboard", "pynput")
+$packages = @("pyautogui", "pynput", "pygetwindow", "pywin32")
 foreach ($package in $packages) {
-    $packageInfo = pip show $package 2>&1
-    if ($packageInfo -match "WARNING: Package(s) not found") {
+    $packageInfo = & conda run -n $envName pip show $package 2>&1
+    $exitCode = $LASTEXITCODE
+    if ($exitCode -ne 0) {
         Log-Message "Installing $package..."
-        pip install $package | Out-String | Add-Content -Path $logFile
+        & conda run -n $envName pip install $package | Out-String | Add-Content -Path $logFile
     } else {
         Log-Message "$package is already installed."
     }
@@ -40,7 +41,7 @@ foreach ($package in $packages) {
 
 # Run the Python script and wait for it to complete
 Log-Message "Running Python script '$pythonScript'..."
-Start-Process -FilePath "python" -ArgumentList $pythonScript -NoNewWindow
+Start-Process -FilePath "conda" -ArgumentList "run -n $envName python $pythonScript" -NoNewWindow
 
 # Print message to log file
 Log-Message "Recenter Mouse Active"

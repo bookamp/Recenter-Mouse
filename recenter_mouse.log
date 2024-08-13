@@ -1,11 +1,12 @@
  
-2024-08-11 15:09:40 - Starting recenter_mouse.ps1
-2024-08-11 15:09:42 - Activating conda environment 'recenter_mouse'...
+2024-08-13 18:12:06 - Starting recenter_mouse.ps1
+2024-08-13 18:12:09 - Activating conda environment 'recenter_mouse'...
 
-2024-08-11 15:09:43 - pyautogui is already installed.
-2024-08-11 15:09:44 - keyboard is already installed.
-2024-08-11 15:09:44 - pynput is already installed.
-2024-08-11 15:09:44 - Running Python script 'recenter_mouse.py'...
-2024-08-11 15:09:44 - Recenter Mouse Active
-2024-08-11 15:09:44 - Finished recenter_mouse.ps1
-2024-08-11 15:09:44,891 - Keyboard listener is now running
+2024-08-13 18:12:12 - pyautogui is already installed.
+2024-08-13 18:12:15 - pynput is already installed.
+2024-08-13 18:12:17 - pygetwindow is already installed.
+2024-08-13 18:12:20 - pywin32 is already installed.
+2024-08-13 18:12:20 - Running Python script 'recenter_mouse.py'...
+2024-08-13 18:12:20 - Recenter Mouse Active
+2024-08-13 18:12:20 - Finished recenter_mouse.ps1
+2024-08-13 18:12:22,085 - Keyboard listener is now running

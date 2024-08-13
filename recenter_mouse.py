@@ -3,6 +3,10 @@ from pynput import keyboard
 from ctypes import windll, create_string_buffer, byref, Structure, c_ulong, c_long, c_ushort, c_short, c_char
 import os
 import logging
+import pygetwindow as gw
+import win32api
+import win32con
+import win32gui
 
 # Set up logging
 logging.basicConfig(filename='recenter_mouse.log', level=logging.INFO, format='%(asctime)s - %(message)s')
@@ -75,8 +79,25 @@ def center_mouse():
         # Move the mouse to the center of the main display
         pyautogui.moveTo(center_x, center_y)
 
+def move_window_to_main_monitor():
+    # Get the handle of the foreground window
+    hwnd = gw.getActiveWindow()._hWnd
+
+    # Unmaximize the window if it is maximized
+    win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)
+
+    # Get the main monitor dimensions
+    main_display = get_main_display()
+    if main_display:
+        x, y, width, height = main_display
+
+        # Move the window to the main monitor without resizing or maximizing it
+        win32gui.SetWindowPos(hwnd, win32con.HWND_TOP, x, y, 0, 0, win32con.SWP_NOSIZE | win32con.SWP_NOZORDER | win32con.SWP_NOACTIVATE)
+
 def on_activate():
     center_mouse()
+    move_window_to_main_monitor()
+    
 
 def for_canonical(f):
     return lambda k: f(l.canonical(k))
@@ -95,4 +116,3 @@ if __name__ == "__main__":
         
         logging.info("Keyboard listener is now running")
         l.join()
-        
